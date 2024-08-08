@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>       
+    <script type="module" crossorigin src="assets/app.0c0d104d.js"></script>
+    <link rel="stylesheet" href="assets/app.4fc235ee.css">
+  </head>
+  <body class="antialiased text-slate-600 bg-slate-100">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div id="loading-container">
+        <div>
+          <div style="font-family: Verdana, sans-serif; text-align: center; margin-top: 50px;">Loading...</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const elem = document.querySelector('#loading-container > div > div')
+      let dots = 0;
+      window.loadingInterval = setInterval(() => {
+        elem.innerText = 'Loading data' + Array((dots++ % 4)).fill('.').join('');
+      }, 500)
+    </script>
+    
+  </body>
+</html>
