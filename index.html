@@ -8,9 +8,7 @@
     <script>  
       document.addEventListener("DOMContentLoaded", function() {
         var listener = () => {  
-          console.log("?")
           plausible('Scroll');
-          console.log("!")
           window.removeEventListener('scroll', listener)  
         }
         window.addEventListener('scroll', listener)
