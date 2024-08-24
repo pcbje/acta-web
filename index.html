@@ -8,7 +8,7 @@
     <script>  
       document.addEventListener("DOMContentLoaded", function() {
         var listener = () => {  
-          plausible('Scroll');
+          plausible('Scroll'), {props: {method: 'HTTP', position: 'footer'}};
           window.removeEventListener('scroll', listener)  
         }
         window.addEventListener('scroll', listener)
